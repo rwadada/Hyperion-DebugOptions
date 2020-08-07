@@ -3,7 +3,7 @@
     package="com.rwadada.hyperion.plugin.debugoptions">
 
     <application>
-        <activity android:name=".DebugMenuActivity"></activity>
+        <activity android:name=".DebugMenuActivity" />
     </application>
 
 </manifest>
