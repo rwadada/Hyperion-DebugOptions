@@ -3,9 +3,8 @@ package com.rwadada.hyperion.plugin.debugoptions
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.rwadada.hyperion.plugin.debugoptions.databinding.LayoutDebugMenuItemBinding
-import com.rwadada.hyperion.plugin.debugoptions.databinding.LayoutDebugMenuSectioningBinding
 
 class DebugMenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun getItemCount(): Int = DebugMenu.items.size
@@ -31,13 +30,13 @@ class DebugMenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         when (ItemType.resolve(holder.itemViewType)) {
             ItemType.SECTIONING -> {
                 if (debugMenuItem is SectioningItem && holder is SectionVH) {
-                    holder.binding.title.text = debugMenuItem.title
+                    holder.title.text = debugMenuItem.title
                 }
             }
             ItemType.DEBUG_MENU -> {
                 if (debugMenuItem is MenuItem && holder is DebugMenuVH) {
-                    holder.binding.title.text = debugMenuItem.title
-                    holder.binding.base.setOnClickListener {
+                    holder.title.text = debugMenuItem.title
+                    holder.base.setOnClickListener {
                         debugMenuItem.onClickItem()
                     }
                 }
@@ -55,8 +54,7 @@ class DebugMenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     class SectionVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val binding: LayoutDebugMenuSectioningBinding =
-            LayoutDebugMenuSectioningBinding.bind(itemView)
+        val title = itemView.findViewById<TextView>(R.id.title)
 
         companion object {
             fun newInstance(parent: ViewGroup): SectionVH {
@@ -68,7 +66,8 @@ class DebugMenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     class DebugMenuVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val binding: LayoutDebugMenuItemBinding = LayoutDebugMenuItemBinding.bind(itemView)
+        val title = itemView.findViewById<TextView>(R.id.title)
+        val base = itemView.findViewById<View>(R.id.base)
 
         companion object {
             fun newInstance(parent: ViewGroup): DebugMenuVH {
