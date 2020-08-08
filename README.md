@@ -1,4 +1,5 @@
 # Hyperion-DebugOptions
+[![Release](https://jitpack.io/v/rwadada/Hyperion-DebugOptions.svg)](https://jitpack.io/#rwadada/Hyperion-DebugOptions)
 
 # Usage
 
