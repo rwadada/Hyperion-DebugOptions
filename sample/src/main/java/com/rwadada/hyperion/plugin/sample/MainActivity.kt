@@ -1,4 +1,4 @@
-package com.rwadada.hyperion.plugin.debugoptions
+package com.rwadada.hyperion.plugin.sample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
