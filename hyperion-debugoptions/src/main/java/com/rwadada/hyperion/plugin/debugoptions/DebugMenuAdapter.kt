@@ -37,7 +37,7 @@ class DebugMenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 if (debugMenuItem is MenuItem && holder is DebugMenuVH) {
                     holder.title.text = debugMenuItem.title
                     holder.base.setOnClickListener {
-                        debugMenuItem.onClickItem()
+                        debugMenuItem.onClickItem(it.context)
                     }
                 }
             }

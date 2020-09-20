@@ -1,5 +1,7 @@
 package com.rwadada.hyperion.plugin.sample
 
+import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
 import com.rwadada.hyperion.plugin.debugoptions.DebugMenu
 import com.rwadada.hyperion.plugin.debugoptions.MenuItem
 import com.rwadada.hyperion.plugin.debugoptions.SectioningItem
@@ -17,7 +19,7 @@ class DebugApp : App() {
                 override val title: String
                     get() = "Test1"
 
-                override fun onClickItem() {
+                override fun onClickItem(context: Context) {
                     println("Hoge")
                 }
             },
@@ -25,7 +27,7 @@ class DebugApp : App() {
                 override val title: String
                     get() = "Test2"
 
-                override fun onClickItem() {
+                override fun onClickItem(context: Context) {
                     println("Hoge")
                 }
             },
@@ -33,7 +35,7 @@ class DebugApp : App() {
                 override val title: String
                     get() = "Test3"
 
-                override fun onClickItem() {
+                override fun onClickItem(context: Context) {
                     println("Hoge")
                 }
             },
@@ -41,7 +43,7 @@ class DebugApp : App() {
                 override val title: String
                     get() = "Test4"
 
-                override fun onClickItem() {
+                override fun onClickItem(context: Context) {
                     println("Hoge")
                 }
             }
