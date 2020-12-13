@@ -56,7 +56,7 @@ Step 2. Add the dependency
 
 ```groovy
 dependencies {
-    debugImplementation 'com.github.rwadada:Hyperion-DebugOptions:1.0.0'
+    debugImplementation 'com.github.rwadada:Hyperion-DebugOptions:1.1.0'
 }
 ```
 Developed By
